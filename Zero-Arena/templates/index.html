@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inventory Management System</h1>
+      <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+      </div>
+      <div class="details-container">
+        <h2>Details</h2>
+        <p>Empty slots: <span id="empty-slots">N/A</span></p>
+      </div>
+    </div>
+  </body>
+</html>
