@@ -7,12 +7,14 @@ Create and activate a new conda environment (optional but recommended)
 conda create -n myenv python=3.10
 conda activate myenv
 ```
-
 Install dependencies
 ```bash
 pip install -r requirements.txt
-Step 2 — Run the Application
+```
+
+**Step 2 — Run the Application**
 Start the Flask application and log its output to a file:
+```bash
 python app.py > flask_output.log &
 ```
 This runs the application in the background and stores the console output in flask_output.log.
