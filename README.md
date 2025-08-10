@@ -2,13 +2,13 @@
 
 **Step 1 — Install Requirements**
 It is recommended to use a Conda environment to avoid dependency conflicts.
-## Create and activate a new conda environment (optional but recommended)
+Create and activate a new conda environment (optional but recommended)
 ```bash
 conda create -n myenv python=3.10
 conda activate myenv
 ```
 
-## Install dependencies
+Install dependencies
 ```bash
 pip install -r requirements.txt
 Step 2 — Run the Application
