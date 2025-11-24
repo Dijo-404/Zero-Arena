@@ -1,33 +1,84 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f4f6f8;
+  color: #333;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
+.header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
   text-align: center;
-  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.video-section, .details-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  flex: 1 1 400px;
 }
 
 .video-container {
-  width: 100%;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .video-container img {
   width: 100%;
-  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.details-container {
-  border: 1px solid #ccc;
-  padding: 20px;
+.details-card {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.status-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status-badge.online {
+  background-color: #10b981;
+  color: white;
+}
+
+.status-badge.offline {
+  background-color: #ef4444;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }

@@ -2,20 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Inventory Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real-Time Inventory Tracking</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <h1>Inventory Management System</h1>
-      <div class="video-container">
-        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
-      </div>
-      <div class="details-container">
-        <h2>Details</h2>
-        <p>Empty slots: <span id="empty-slots">N/A</span></p>
-      </div>
-    </div>
+    <header class="header">
+      <h1>📦 Real-Time Inventory Dashboard</h1>
+    </header>
+
+    <main class="main-container">
+      <!-- Video Feed Section -->
+      <section class="video-section">
+        <h2>Live Camera Feed</h2>
+        <div class="video-container">
+          <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+      </section>
+
+      <!-- Inventory Details -->
+      <section class="details-section">
+        <h2>Inventory Details</h2>
+        <div class="details-card">
+          <p><strong>Empty Slots:</strong> <span id="empty-slots">N/A</span></p>
+          <p><strong>Last Update:</strong> <span id="last-update">--:--:--</span></p>
+          <p><strong>Status:</strong> <span id="system-status" class="status-badge online">Online</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Inventory Management System</p>
+    </footer>
+
+    <script>
+      // Simulated real-time updates (replace with WebSocket/Flask-SSE later)
+      setInterval(() => {
+        const now = new Date().toLocaleTimeString();
+        document.getElementById("last-update").textContent = now;
+        // Example: change empty slots dynamically
+        document.getElementById("empty-slots").textContent = Math.floor(Math.random() * 10);
+      }, 3000);
+    </script>
   </body>
 </html>

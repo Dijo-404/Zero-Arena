@@ -13,7 +13,7 @@ def initialize_resources():
     global model, model_loaded, camera
     # Load the YOLOv8 model
     try:
-        model = YOLO('yolo_model.pt')
+        model = YOLO('/home/dijo404/git/Zero-Arena/yolov8s.pt')
         model_loaded = True
         print("YOLO model loaded successfully.")
     except Exception as e:
